@@ -1,4 +1,4 @@
-import Video from '../components/home/Video'
+import Video from '../components/home/video'
 import HomeHeroText from '../components/home/HomeHeroText.jsx'
 import HomeBottomText from '../components/home/HomeBottomText.jsx'
 
