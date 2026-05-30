@@ -4,19 +4,22 @@ import Agence from './pages/Agence'
 import Projects from './pages/Projects'
 import Navbar from './components/Navigation/Navbar'
 import FullScreenNav from './components/Navigation/FullScreenNav'
+import NavContext from './context/NavContext'
 
 
 const App = () => {
   return (
-    <div className='overflow-x-hidden'>
-      <Navbar />
-      <FullScreenNav />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/agence' element={<Agence />} />
-        <Route path='/projects' element={<Projects />} />
-      </Routes>
-    </div>
+    <NavContext>
+      <div className='overflow-x-hidden'>
+        <Navbar />
+        <FullScreenNav />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/agence' element={<Agence />} />
+          <Route path='/projects' element={<Projects />} />
+        </Routes>
+      </div>
+    </NavContext>
   )
 }
 
